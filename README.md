@@ -17,7 +17,6 @@ This [dbt package](https://docs.getdbt.com/docs/package-management):
     - income_accounts
     - items
     - locations
-    - partners
     - transaction_lines
     - transactions
     - subsidiaries

@@ -56,6 +56,6 @@ left join locations on locations.location_id = transaction_lines.location_id
 left join departments on departments.department_id = transaction_lines.department_id
 join accounts on accounts.account_id = transactions_with_converted_amounts.account_id
 join accounting_periods as reporting_accounting_periods on reporting_accounting_periods.accounting_period_id = transactions_with_converted_amounts.reporting_accounting_period_id
-where reporting_accounting_periods.fiscal_calendar_id  = (select fiscal_calendar_id from subsidiaries where parent_id is null)
+where reporting_accounting_periods.fiscal_calendar_id  = 6
   and transactions_with_converted_amounts.transaction_accounting_period_id = transactions_with_converted_amounts.reporting_accounting_period_id
   and transactions_with_converted_amounts.is_income_statement

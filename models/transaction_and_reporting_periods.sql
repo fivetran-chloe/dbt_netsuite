@@ -18,6 +18,6 @@ transaction_and_reporting_periods as (
     and multiplier.starting <= {{ current_timestamp() }}
   where lower(base.quarter) = 'no'
     and lower(base.year_0) = 'no'
-    and base.fiscal_calendar_id = (select fiscal_calendar_id from subsidiaries where parent_id is null) -- fiscal calendar will align with parent subsidiary's default calendar
+    and base.fiscal_calendar_id = 6
 )
 select * from transaction_and_reporting_periods
