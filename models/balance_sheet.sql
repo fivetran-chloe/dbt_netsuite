@@ -65,8 +65,8 @@ from transactions_with_converted_amounts
 join accounts on accounts.account_id = transactions_with_converted_amounts.account_id
 join accounting_periods as reporting_accounting_periods on reporting_accounting_periods.accounting_period_id = transactions_with_converted_amounts.reporting_accounting_period_id
 join accounting_periods as transaction_accounting_periods on transaction_accounting_periods.accounting_period_id = transactions_with_converted_amounts.transaction_accounting_period_id
-where reporting_accounting_periods.fiscal_calendar_id = 6
-  and transaction_accounting_periods.fiscal_calendar_id = 6
+where reporting_accounting_periods.fiscal_calendar_id = 1
+  and transaction_accounting_periods.fiscal_calendar_id = 1
   and (lower(accounts.is_balancesheet) = 't'
     or transactions_with_converted_amounts.is_income_statement)
 
@@ -92,6 +92,6 @@ select
 from transactions_with_converted_amounts
 join accounts on accounts.account_id = transactions_with_converted_amounts.account_id
 join accounting_periods as reporting_accounting_periods on reporting_accounting_periods.accounting_period_id = transactions_with_converted_amounts.reporting_accounting_period_id
-where reporting_accounting_periods.fiscal_calendar_id = 6
+where reporting_accounting_periods.fiscal_calendar_id = 1
   and (lower(accounts.is_balancesheet) = 't'
     or transactions_with_converted_amounts.is_income_statement)
